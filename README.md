@@ -7,5 +7,5 @@
 
 ## Screenshot
 
-![Image1](https://raw.githubusercontent.com/chunmusic/BodyTemperature-Connect-IQ-Widget/master/image/Screen%20Shot%202021-02-03%20at%208.38.20%20PM.png)
+![Image1](https://raw.githubusercontent.com/chunmusic/BodyTemperature-Connect-IQ-Widget/master/image/image1.png)
 
