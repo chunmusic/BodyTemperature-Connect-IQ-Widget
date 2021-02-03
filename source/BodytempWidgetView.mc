@@ -49,7 +49,7 @@ class BodytempWidgetView extends Ui.View {
    		var body_temp = 0.109*temp_data + 33.07;
    		
     	if (body_temp != null) {
-			View.findDrawableById("value").setText((body_temp).format("%.0f"));
+			View.findDrawableById("value").setText((body_temp).format("%.1f"));
    	    } 
    	    
    	    else {
