@@ -7,7 +7,8 @@ using Toybox.SensorHistory;
 
 class BodytempWidgetView extends Ui.View {
 	hidden var mTitle = "Body";
-	hidden var subTitle = "Temprature (C)";
+	hidden var subTitle = "Temprature (°C)";
+	hidden var f_subTitle = "Temprature (°F)";
 
     function initialize() {
 
@@ -18,7 +19,7 @@ class BodytempWidgetView extends Ui.View {
     function onLayout(dc) {
 		View.setLayout(Rez.Layouts.MainLayout(dc));
     	mTitle = "Body";
-    	subTitle = "Temperature (C)";
+    	subTitle = "Temperature (°C)";
         View.findDrawableById("title").setText(mTitle);
         View.findDrawableById("subtitle").setText(subTitle);
         View.findDrawableById("value").setText(" ");
@@ -47,9 +48,11 @@ class BodytempWidgetView extends Ui.View {
    		var temp_data = sensorIter.next().data;
    		
    		var body_temp = 0.109*temp_data + 33.07;
+   		var f_body_temp = (body_temp*9)/5 + 32;
    		
     	if (body_temp != null) {
 			View.findDrawableById("value").setText((body_temp).format("%.1f"));
+			View.findDrawableById("f_value").setText((f_body_temp).format("%.1f")+" °F");
    	    } 
    	    
    	    else {
