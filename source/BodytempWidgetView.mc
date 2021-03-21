@@ -51,13 +51,34 @@ class BodytempWidgetView extends Ui.View {
    		var f_body_temp = (body_temp*9)/5 + 32;
    		
     	if (body_temp != null) {
+    	
 			View.findDrawableById("value").setText((body_temp).format("%.1f"));
 			View.findDrawableById("f_value").setText((f_body_temp).format("%.1f")+" °F");
+    	
+    		if (body_temp <= 35.5) {
+				View.findDrawableById("value").setColor(Gfx.COLOR_BLUE);
+				View.findDrawableById("f_value").setColor(Gfx.COLOR_BLUE);
+			}
+			else if (body_temp > 35.5 && body_temp <=36.5){
+				View.findDrawableById("value").setColor(Gfx.COLOR_GREEN);
+				View.findDrawableById("f_value").setColor(Gfx.COLOR_GREEN);
+			}
+			else if (body_temp > 36.5 && body_temp <=37.5){
+				View.findDrawableById("value").setColor(Gfx.COLOR_ORANGE);
+				View.findDrawableById("f_value").setColor(Gfx.COLOR_ORANGE);
+			}
+			else if (body_temp > 37.5){
+				View.findDrawableById("value").setColor(Gfx.COLOR_RED);
+				View.findDrawableById("f_value").setColor(Gfx.COLOR_RED);
+			}
+			
    	    } 
    	    
    	    else {
 			View.findDrawableById("title").setText(mTitle + "\nnot available");
 			View.findDrawableById("value").setText(" ");
+			View.findDrawableById("value").setColor(Gfx.COLOR_WHITE);
+			View.findDrawableById("f_value").setColor(Gfx.COLOR_WHITE);
         }
         
         // Call the parent onUpdate function to redraw the layout
