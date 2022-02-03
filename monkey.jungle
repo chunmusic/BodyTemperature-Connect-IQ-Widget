@@ -1,4 +1,5 @@
 project.manifest = manifest.xml
+
 #
 base.sourcePath=$(base.sourcePath)
 #
@@ -15,7 +16,7 @@ icon60x60 = "launcher-icons\icon-60x60"
 icon65x65 = "launcher-icons\icon-65x65"
 
 base.resourcePath=$(base.resourcePath)
-approachs62.resourcePath = $(approachs62.resourcePath);$(icon35x35)
+d2charlie.resourcePath = $(d2charlie.resourcePath);$(icon40x40)
 d2delta.resourcePath = $(d2delta.resourcePath);$(icon40x40)
 d2deltapx.resourcePath = $(d2deltapx.resourcePath);$(icon40x40)
 d2deltas.resourcePath = $(d2deltas.resourcePath);$(icon40x40)
@@ -30,6 +31,9 @@ fenix5xplus.resourcePath = $(fenix5xplus.resourcePath);$(icon40x40)
 fenix6.resourcePath = $(fenix6.resourcePath);$(icon40x40)
 fenix6pro.resourcePath = $(fenix6pro.resourcePath);$(icon40x40)
 fenix6xpro.resourcePath = $(fenix6xpro.resourcePath);$(icon40x40)
+fenix7.resourcePath = $(fenix7.resourcePath);$(icon40x40)
+fenix7s.resourcePath = $(fenix7s.resourcePath);$(icon36x36)
+fenix7x.resourcePath = $(fenix7x.resourcePath);$(icon40x40)
 fr645.resourcePath = $(fr645.resourcePath);$(icon40x40)
 fr645m.resourcePath = $(fr645m.resourcePath);$(icon40x40)
 fr745.resourcePath = $(fr745.resourcePath);$(icon40x40)

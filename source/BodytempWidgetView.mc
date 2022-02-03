@@ -55,19 +55,19 @@ class BodytempWidgetView extends Ui.View {
 			View.findDrawableById("value").setText((body_temp).format("%.1f"));
 			View.findDrawableById("f_value").setText((f_body_temp).format("%.1f")+" °F");
     	
-    		if (body_temp <= 35.5) {
+    		if (body_temp < 36) {
 				View.findDrawableById("value").setColor(Gfx.COLOR_BLUE);
 				View.findDrawableById("f_value").setColor(Gfx.COLOR_BLUE);
 			}
-			else if (body_temp > 35.5 && body_temp <=36.5){
+			else if (body_temp >=36 && body_temp <37){
 				View.findDrawableById("value").setColor(Gfx.COLOR_GREEN);
 				View.findDrawableById("f_value").setColor(Gfx.COLOR_GREEN);
 			}
-			else if (body_temp > 36.5 && body_temp <=37.5){
+			else if (body_temp >=37 && body_temp <38){
 				View.findDrawableById("value").setColor(Gfx.COLOR_ORANGE);
 				View.findDrawableById("f_value").setColor(Gfx.COLOR_ORANGE);
 			}
-			else if (body_temp > 37.5){
+			else if (body_temp >=38){
 				View.findDrawableById("value").setColor(Gfx.COLOR_RED);
 				View.findDrawableById("f_value").setColor(Gfx.COLOR_RED);
 			}
